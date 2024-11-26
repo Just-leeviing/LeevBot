@@ -50,7 +50,7 @@ async def ping(ctx):  # A slash command will be created with the name "ping"
 async def hug(ctx, user: discord.Member):
     if "hug" in gif_list:
         gif = random.choice(gif_list["hug"])
-        await ctx.reply(f"{ctx.author.mention} hugs {user.mention}! \n{gif}")
+        await ctx.respond(f"{ctx.author.mention} hugs {user.mention}! \n{gif}")
     else:
         await ctx.send("No hugs found 😔")
 
@@ -58,8 +58,8 @@ async def hug(ctx, user: discord.Member):
 async def pat(ctx, user: discord.Member):
     if "pat" in gif_list:
         gif = random.choice(gif_list["pat"])
-        await ctx.send(gif)
+        await ctx.respond(f"{ctx.author.mention} pats {user.mention}! \n{gif}")
     else:
-        await ctx.reply(f"{ctx.author.mention} pats {user.mention}! \n{gif}")
+        await ctx.send("No pats found 😔")
 
 bot.run(os.getenv('TOKEN'))
