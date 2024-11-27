@@ -22,6 +22,7 @@ gif_cache = {}
 
 @bot.event
 async def on_ready():
+    await bot.sync_commands()
     print(f'We have logged in as {bot.user}')
 
 # Function to fetch a random GIF from Giphy asynchronously
