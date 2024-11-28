@@ -1,3 +1,5 @@
+import asyncio
+import threading
 import discord
 import os
 import random
@@ -14,6 +16,7 @@ intents.message_content = True
 
 bot = discord.Bot(intents=intents)  # Use discord.Bot directly
 
+CHANNEL_ID = 1281444467584532514
 # Dictionary to store user gender registrations
 user_gender = {}
 
@@ -23,6 +26,7 @@ gif_cache = {}
 @bot.event
 async def on_ready():
     print(f'We have logged in as {bot.user}')
+    await bot.get_channel(CHANNEL_ID).send("🤖 Bot is waking up!")
 
 # Function to fetch a random GIF from Giphy asynchronously
 async def fetch_gif(action):
@@ -118,4 +122,37 @@ async def ping(ctx):
     await ctx.respond(f"Pong! Latency is {bot.latency}")
 
 # Run the bot with the token from .env
-bot.run(os.getenv('TOKEN'))
+# bot.run(os.getenv('TOKEN'))
+async def run_bot():
+    try:
+        print("🤖 Bot is waking up!")
+        print("To shut down, type 'q' and press Enter\n")
+        await bot.start(os.getenv('TOKEN'))
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+async def main():
+    # Create tasks for bot and input monitoring
+    bot_task = asyncio.create_task(run_bot())
+
+    # Input monitoring loop
+    while True:
+        user_input = await asyncio.get_event_loop().run_in_executor(None, input)
+        
+        if user_input.lower() == 'q':
+            print("\n🌙 Shutting down bot...")
+            
+            await bot.get_channel(CHANNEL_ID).send("I am going for a nap...")
+            # Cancel the bot task
+            bot_task.cancel()
+            
+            # Close the bot connection
+            await bot.close()
+            
+            # Break the monitoring loop
+            break
+
+    print("Bot has been shut down.")
+
+if __name__ == '__main__':
+    asyncio.run(main())
