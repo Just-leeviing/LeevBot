@@ -25,6 +25,7 @@ gif_cache = {}
 
 @bot.event
 async def on_ready():
+    await bot.sync_commands()
     print(f'We have logged in as {bot.user}')
     await bot.get_channel(CHANNEL_ID).send("🤖 Bot is waking up!")
 
