@@ -1,0 +1,39 @@
+{
+    "hug": {
+      "male_male": ["https://media.giphy.com/media/yziFo5qYAOgY8/giphy.gif?cid=790b7611c7yu18q6bl4yr26nb9scmh78ws6c352uokfpnmoo&ep=v1_gifs_search&rid=giphy.gif&ct=g", 
+      "https://tenor.com/nOLYvDsO9cD.gif", "https://tenor.com/hfbQ8k2cf41.gif", "https://tenor.com/bMDgE.gif", "https://tenor.com/bEm6t.gif"],
+      "male_female": ["https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif?cid=790b7611c7yu18q6bl4yr26nb9scmh78ws6c352uokfpnmoo&ep=v1_gifs_search&rid=giphy.gif&ct=g", 
+      "https://tenor.com/bBzTm.gif", "https://tenor.com/bUrdP.gif"],
+      "female_male": ["https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzd5dTE4cTZibDR5cjI2bmI5c2NtaDc4d3M2YzM1MnVva2Zwbm1vbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/lrr9rHuoJOE0w/giphy.gif", 
+      "https://tenor.com/bSu9h.gif", "https://tenor.com/bTnLN.gif", "https://tenor.com/btfSd.gif", "https://tenor.com/bAuyA.gif"],
+      "female_female": ["https://media.giphy.com/media/ZQN9jsRWp1M76/giphy.gif?cid=790b7611c7yu18q6bl4yr26nb9scmh78ws6c352uokfpnmoo&ep=v1_gifs_search&rid=giphy.gif&ct=g", 
+      "https://media.giphy.com/media/u9BxQbM5bxvwY/giphy.gif?cid=ecf05e47ufd8xvhc1kdemqz5ji7smp1te5sawrmbn0lo892z&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      "https://media.giphy.com/media/5eyhBKLvYhafu/giphy.gif?cid=ecf05e47ufd8xvhc1kdemqz5ji7smp1te5sawrmbn0lo892z&ep=v1_gifs_search&rid=giphy.gif&ct=g", 
+      "https://tenor.com/fnAczy6VUvn.gif", "https://tenor.com/lzdohk47XBr.gif", "https://tenor.com/bRvYG.gif"]
+    },
+    "pat": {
+      "male_male": ["https://tenor.com/bniHN.gif", "https://tenor.com/bwQWu.gif", "https://tenor.com/bi4j4.gif", "https://tenor.com/bluZw.gif"],
+      "male_female": ["https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXhiZDM0Y2pudWY5bXdmZnlsMmEzOXozanE5MXo1amp0dXQyZmJ1cyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ARSp9T7wwxNcs/giphy.gif",
+      "https://tenor.com/bSNjK.gif", "https://tenor.com/bEtSF.gif", "https://tenor.com/btwj5.gif", "https://tenor.com/bMqBX.gif", 
+      "https://tenor.com/en-GB/view/anime-head-pat-pat-very-good-good-girl-gif-17187002"],
+      "female_male": ["https://media.giphy.com/media/Z7x24IHBcmV7W/giphy.gif?cid=ecf05e47ndlk1e56qxco08z9m65766gpnuqs91h796qs65jk&ep=v1_gifs_search&rid=giphy.gif&ct=g", 
+      "https://tenor.com/en-GB/view/frieren-pats-heither's-head-sousou-no-frieren-headpat-frieren-heither-gif-9445174606794519653", "https://tenor.com/n0AGWTH5hpM.gif",
+      "https://tenor.com/bSu9q.gif", "https://tenor.com/bE6oZ.gif", "https://tenor.com/bSu9h.gif", "https://tenor.com/bodG9.gif"],
+      "female_female": ["https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXhiZDM0Y2pudWY5bXdmZnlsMmEzOXozanE5MXo1amp0dXQyZmJ1cyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ARSp9T7wwxNcs/giphy.gif", 
+      "https://media.giphy.com/media/PHZ7v9tfQu0o0/giphy.gif?cid=790b7611yxbd34cjnuf9mwffyl2a39z3jq91z5jjtut2fbus&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3ZsMnJuajZoNnJ0b3k4MDA0aWRsYzJjc2pjY3ZweHg0NGcwM3loaSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/5tmRHwTlHAA9WkVxTU/giphy.gif",
+      "https://tenor.com/bSNjK.gif", "https://tenor.com/bEtSF.gif", "https://tenor.com/hE1NY3h3amF.gif", "https://tenor.com/en-GB/view/anime-pat-gif-19380185"
+        ]
+    },
+    "highfive": {
+        "male_male": ["https://tenor.com/bVjXQ.gif", "https://tenor.com/bY2dv.gif", "https://tenor.com/bvf42.gif", "https://tenor.com/Oqw5.gif", "https://tenor.com/Hf18.gif"],
+        "male_female": ["https://tenor.com/7tRy.gif",
+        "https://tenor.com/1eRf.gif", "https://tenor.com/pLjvWQ72ucA.gif", "https://tenor.com/bljTO.gif"],
+        "female_male": ["https://tenor.com/7tRy.gif", 
+        "https://tenor.com/1eRf.gif", "https://tenor.com/pLjvWQ72ucA.gif", "https://tenor.com/bljTO.gif"],
+        "female_female": ["https://tenor.com/Ss9z.gif", 
+        "https://tenor.com/x9lI.gif",
+        "https://tenor.com/bxy01.gif"]
+      }
+  }
+  

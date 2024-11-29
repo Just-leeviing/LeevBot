@@ -3,26 +3,19 @@ import threading
 import discord
 import os
 import random
-import time
 from dotenv import load_dotenv
 from discord.ext import commands
-import aiohttp
 from itertools import cycle
 import json
 
 load_dotenv()
-
 intents = discord.Intents.default()
 intents.message_content = True
-
-bot = discord.Bot(intents=intents)  # Use discord.Bot directly
+bot = discord.Bot(intents=intents) 
 
 CHANNEL_ID = 1281444467584532514
-# Dictionary to store user gender registrations
-user_gender = {}
 
-# Cache for storing fetched GIFs and managing shuffle cycles
-gif_cache = {}
+user_gender = {}
 
 @bot.event
 async def on_ready():
@@ -30,33 +23,12 @@ async def on_ready():
     print(f'We have logged in as {bot.user}')
     await bot.get_channel(CHANNEL_ID).send("🤖 Bot is waking up!")
 
-# Function to fetch a random GIF from Giphy asynchronously
-async def fetch_gif(action):
-    current_time = time.time()
 
-    # Check if the action has a valid cached result within the last 10 minutes
-    if action in gif_cache and current_time - gif_cache[action]['timestamp'] < 600:
-        return next(gif_cache[action]['gif_cycle'])
-
-    # Otherwise, fetch new GIFs from the Giphy API
-    url = "https://api.giphy.com/v1/gifs/search"
-    params = {
-        "api_key": os.getenv('GIPHY_API_KEY'),
-        "q": action,
-        "limit": 20,  # Fetch up to 20 GIFs
-        "rating": "pg-13"
-    }
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url, params=params) as response:
-            if response.status == 200:
-                data = await response.json()
-                if data['data']:
-                    gifs = [gif['images']['original']['url'] for gif in data['data']]
-                    random.shuffle(gifs)  # Shuffle GIFs to avoid repetition
-                    gif_cache[action] = {'gif_cycle': cycle(gifs), 'timestamp': current_time}
-                    return next(gif_cache[action]['gif_cycle'])
-
-    return None
+def load_gifs():
+    with open("gifs.json","r") as file:
+        return json.load(file)
+    
+gif_data = load_gifs()
 
 def load_user_data():
     if os.path.exists("user_data.json"):
@@ -71,7 +43,7 @@ def save_user_data():
         json.dump(user_gender, file, indent=4)
     
 
-@bot.command()
+@bot.command(description="Registers your gender so you get more customized gifs")
 async def register(ctx, gender):
     """Allows users to register their gender as 'male' or 'female'."""
     gender = gender.lower()
@@ -104,10 +76,12 @@ async def action(ctx, action: str, user: discord.Member):
     if not recipient_gender:
         await ctx.respond(f"{user.mention} has not registered their gender yet.")
         return
+    
+    gif_category = f"{sender_gender}_{recipient_gender}"
 
     # Fetch a random GIF asynchronously based on the action
-    gif_url = await fetch_gif(action)
-    if gif_url:
+    if gif_category in gif_data[action]:
+        gif_url = random.choice(gif_data[action][gif_category])
         embed = discord.Embed(
             description=f"{ctx.author.mention} gives a {action} to {user.mention}! 💖",
             color=discord.Color.random()
@@ -117,7 +91,6 @@ async def action(ctx, action: str, user: discord.Member):
     else:
         await ctx.respond("Sorry, I couldn't find a suitable GIF. 😔")
 
-# Event listener for simple message responses (optional)
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
