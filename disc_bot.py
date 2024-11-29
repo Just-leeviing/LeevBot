@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from discord.ext import commands
 import aiohttp
 from itertools import cycle
+import json
 
 load_dotenv()
 
@@ -57,6 +58,18 @@ async def fetch_gif(action):
 
     return None
 
+def load_user_data():
+    if os.path.exists("user_data.json"):
+        with open ("user_data.json", "r") as file:
+            return json.load(file)
+    return {}
+
+user_gender = load_user_data()
+
+def save_user_data():
+    with open("user_data.json", "w") as file:
+        json.dump(user_gender, file, indent=4)
+    
 
 @bot.command()
 async def register(ctx, gender):
@@ -65,7 +78,9 @@ async def register(ctx, gender):
     if gender not in ['male', 'female']:
         await ctx.respond("Invalid gender! Please choose 'male' or 'female'. I don't accept walmart bags. Please input your biological gender.")
         return
-    user_gender[ctx.author.id] = gender
+    user_gender[str(ctx.author.id)] = gender
+    save_user_data()
+
     await ctx.respond(f"{ctx.author.mention}, your gender has been set to **{gender}**.")
 
 
@@ -80,8 +95,8 @@ async def action(ctx, action: str, user: discord.Member):
         return
 
     # Get sender and recipient gender
-    sender_gender = user_gender.get(ctx.author.id)
-    recipient_gender = user_gender.get(user.id)
+    sender_gender = user_gender.get(str(ctx.author.id))
+    recipient_gender = user_gender.get(str(user.id))
 
     if not sender_gender:
         await ctx.respond(f"{ctx.author.mention}, please register your gender using `/register male` or `/register female`.")
