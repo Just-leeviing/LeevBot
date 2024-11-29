@@ -1,30 +1,102 @@
 {
   "hug": {
-    "male_male": ["https://tenor.com/hfbQ8k2cf41.gif", "https://tenor.com/nOLYvDsO9cD.gif", "https://tenor.com/bTwYD.gif", 
-    "https://tenor.com/bujY8.gif", "https://tenor.com/bMDgE.gif", "https://tenor.com/bWgYV.gif"],
-    "male_female": ["https://tenor.com/bBzTm.gif", "https://tenor.com/bUrdP.gif", "https://tenor.com/bvwjy.gif",
-    "https://tenor.com/bM9s6.gif", "https://tenor.com/bz2QF.gif", "https://tenor.com/buIr7.gif", "https://tenor.com/bKxOV.gif",
-    "https://tenor.com/bxZX5.gif", "https://tenor.com/9ml1.gif", "https://tenor.com/blkN3.gif", "https://tenor.com/bBzUT.gif", "https://tenor.com/bvgit.gif"],
-    "female_male": ["https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzd5dTE4cTZibDR5cjI2bmI5c2NtaDc4d3M2YzM1MnVva2Zwbm1vbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/lrr9rHuoJOE0w/giphy.gif", 
-    "https://tenor.com/sKvMcSpWTv2.gif", "https://tenor.com/bVKMK.gif", "https://tenor.com/bSu9h.gif", "https://tenor.com/bhraa.gif",
-    "https://tenor.com/bFbSA.gif", "https://tenor.com/bGK5z.gif", "https://tenor.com/bQjZg.gif", "https://tenor.com/bsBdH.gif", "https://tenor.com/bkrSo.gif"],
-    "female_female": ["https://tenor.com/bRvYG.gif", "https://tenor.com/bVrJA.gif", "https://tenor.com/bXhM6.gif",
-    "https://tenor.com/bI6wZ.gif", "https://tenor.com/biRNA.gif", "https://tenor.com/bzgd6.gif"]
+    "male_male": [
+      "https://tenor.com/hfbQ8k2cf41.gif",
+      "https://tenor.com/nOLYvDsO9cD.gif",
+      "https://tenor.com/bTwYD.gif",
+      "https://tenor.com/bujY8.gif",
+      "https://tenor.com/bMDgE.gif",
+      "https://tenor.com/bWgYV.gif"
+    ],
+    "male_female": [
+      "https://tenor.com/bBzTm.gif",
+      "https://tenor.com/bUrdP.gif",
+      "https://tenor.com/bvwjy.gif",
+      "https://tenor.com/bM9s6.gif",
+      "https://tenor.com/bz2QF.gif",
+      "https://tenor.com/buIr7.gif",
+      "https://tenor.com/bKxOV.gif",
+      "https://tenor.com/bxZX5.gif",
+      "https://tenor.com/9ml1.gif",
+      "https://tenor.com/blkN3.gif",
+      "https://tenor.com/bBzUT.gif",
+      "https://tenor.com/bvgit.gif"
+    ],
+    "female_male": [
+      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzd5dTE4cTZibDR5cjI2bmI5c2NtaDc4d3M2YzM1MnVva2Zwbm1vbyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/lrr9rHuoJOE0w/giphy.gif",
+      "https://tenor.com/sKvMcSpWTv2.gif",
+      "https://tenor.com/bVKMK.gif",
+      "https://tenor.com/bSu9h.gif",
+      "https://tenor.com/bhraa.gif",
+      "https://tenor.com/bFbSA.gif",
+      "https://tenor.com/bGK5z.gif",
+      "https://tenor.com/bQjZg.gif",
+      "https://tenor.com/bsBdH.gif",
+      "https://tenor.com/bkrSo.gif"
+    ],
+    "female_female": [
+      "https://tenor.com/bRvYG.gif",
+      "https://tenor.com/bVrJA.gif",
+      "https://tenor.com/bXhM6.gif",
+      "https://tenor.com/bI6wZ.gif",
+      "https://tenor.com/biRNA.gif",
+      "https://tenor.com/bzgd6.gif"
+    ]
   },
   "pat": {
-    "male_male": ["https://tenor.com/bniHN.gif", "https://tenor.com/bwQWu.gif", "https://tenor.com/bi4j4.gif",
-    "https://tenor.com/bmP1I.gif","https://tenor.com/W2zB.gif", "https://tenor.com/bhHmc.gif"],
-    "male_female": ["https://tenor.com/bSNjK.gif", "https://tenor.com/bEtSF.gif", "https://tenor.com/bEtS1.gif",
-    "https://tenor.com/byK2I.gif", "https://tenor.com/kiDNB4S12mW.gif", "https://tenor.com/rw8KZr9DxhY.gif", "https://tenor.com/bKXRf.gif"],
-    "female_male": ["https://tenor.com/n0AGWTH5hpM.gif", "https://tenor.com/bSu9q.gif", "https://tenor.com/bE6oZ.gif", "https://tenor.com/bSu9h.gif",
-    "https://tenor.com/bFhcZ.gif"],
-    "female_female": ["https://tenor.com/bSNjK.gif", "https://tenor.com/bEtSF.gif", "https://tenor.com/biRNA.gif",
-    "https://tenor.com/hE1NY3h3amF.gif", "https://tenor.com/bttPN.gif", "https://tenor.com/3TW9.gif"]
+    "male_male": [
+      "https://tenor.com/bniHN.gif",
+      "https://tenor.com/bwQWu.gif",
+      "https://tenor.com/bi4j4.gif",
+      "https://tenor.com/bmP1I.gif",
+      "https://tenor.com/W2zB.gif",
+      "https://tenor.com/bhHmc.gif"
+    ],
+    "male_female": [
+      "https://tenor.com/bSNjK.gif",
+      "https://tenor.com/bEtSF.gif",
+      "https://tenor.com/bEtS1.gif",
+      "https://tenor.com/byK2I.gif",
+      "https://tenor.com/kiDNB4S12mW.gif",
+      "https://tenor.com/rw8KZr9DxhY.gif",
+      "https://tenor.com/bKXRf.gif"
+    ],
+    "female_male": [
+      "https://tenor.com/n0AGWTH5hpM.gif",
+      "https://tenor.com/bSu9q.gif",
+      "https://tenor.com/bE6oZ.gif",
+      "https://tenor.com/bSu9h.gif",
+      "https://tenor.com/bFhcZ.gif"
+    ],
+    "female_female": [
+      "https://tenor.com/bSNjK.gif",
+      "https://tenor.com/bEtSF.gif",
+      "https://tenor.com/biRNA.gif",
+      "https://tenor.com/hE1NY3h3amF.gif",
+      "https://tenor.com/bttPN.gif",
+      "https://tenor.com/3TW9.gif"
+    ]
   },
   "highfive": {
-    "male_male": ["https://tenor.com/bVjXQ.gif", "https://tenor.com/bY2dv.gif", "https://tenor.com/bvf42.gif", "https://tenor.com/bfQiO.gif"],
-    "male_female": ["https://tenor.com/7tRy.gif", "https://tenor.com/bfQiO.gif", "https://tenor.com/bUw0G.gif"],
-    "female_male": ["https://tenor.com/7tRy.gif","https://tenor.com/bfQiO.gif", "https://tenor.com/bUw0G.gif"],
-    "female_female": ["https://tenor.com/bxy01.gif", "https://tenor.com/boMAq.gif"]
+    "male_male": [
+      "https://tenor.com/bVjXQ.gif",
+      "https://tenor.com/bY2dv.gif",
+      "https://tenor.com/bvf42.gif",
+      "https://tenor.com/bfQiO.gif"
+    ],
+    "male_female": [
+      "https://tenor.com/7tRy.gif",
+      "https://tenor.com/bfQiO.gif",
+      "https://tenor.com/bUw0G.gif"
+    ],
+    "female_male": [
+      "https://tenor.com/7tRy.gif",
+      "https://tenor.com/bfQiO.gif",
+      "https://tenor.com/bUw0G.gif"
+    ],
+    "female_female": [
+      "https://tenor.com/bxy01.gif",
+      "https://tenor.com/boMAq.gif"
+    ]
   }
 }
