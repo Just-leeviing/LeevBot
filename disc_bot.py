@@ -1,5 +1,7 @@
 import asyncio
+from io import BytesIO
 import threading
+import aiohttp
 import discord
 import os
 import random
@@ -25,7 +27,8 @@ async def on_ready():
 
 
 def load_gifs():
-    with open("gifs.json","r") as file:
+    # with open("gifs.json","r") as file:
+    with open("some_out.json","r") as file:
         return json.load(file)
     
 gif_data = load_gifs()
@@ -84,10 +87,19 @@ async def action(ctx, action: str, user: discord.Member):
         gif_url = random.choice(gif_data[action][gif_category])
         embed = discord.Embed(
             description=f"{ctx.author.mention} gives a {action} to {user.mention}! 💖",
-            color=discord.Color.random()
+            color=discord.Color.random(),
         )
         embed.set_image(url=gif_url)
+        print(f"Replying to {ctx.author.mention}-> {action} -> {user.mention} with {gif_url}")
         await ctx.respond(embed=embed)
+        # await ctx.respond(gif_url)
+        # await ctx.respond(content=gif_url, embed=embed)
+        # embed_video = discord.EmbedMedia(url=gif_url)
+        # await ctx.respond(embed_video)
+        # embed_field = discord.EmbedField('Some name',gif_url,True)
+        # await ctx.respond(embed_field)
+        # embed.add_field(embed_field)
+        # await ctx.respond(embed=embed)
     else:
         await ctx.respond("Sorry, I couldn't find a suitable GIF. 😔")
 
