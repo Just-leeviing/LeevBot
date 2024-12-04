@@ -87,5 +87,14 @@
             "https://media1.tenor.com/m/1SKzPjLVtrIAAAAd/friends-high5.gif",
             "https://media1.tenor.com/m/AlFl2dckMe4AAAAd/fresh-precure-high-five.gif"
         ]
+    },
+    "kiss": {
+        "male_female": [
+            "https://media1.tenor.com/m/yO9uLDwTkWYAAAAd/fake-kiss-viralhog.gif",
+            "https://media1.tenor.com/m/SHNuYdCiTXsAAAAd/damon-salvatore-kissing-a-hand.gif"
+        ],
+        "female_male": [
+            "https://media1.tenor.com/m/Oys_wdjKa08AAAAd/kisses-mixed-kittens.gif"
+        ]
     }
 }

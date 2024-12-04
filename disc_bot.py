@@ -63,7 +63,7 @@ async def register(ctx, gender):
 async def action(ctx, action: str, user: discord.Member):
     """Sends a GIF based on the action and gender combination."""
     action = action.lower()
-    valid_actions = ["hug", "kiss", "pat", "highfive"]
+    valid_actions = gif_data.keys()
 
     if action not in valid_actions:
         await ctx.respond(f"Invalid action! Choose from: {', '.join(valid_actions)}.")
@@ -77,8 +77,8 @@ async def action(ctx, action: str, user: discord.Member):
         await ctx.respond(f"{ctx.author.mention}, please register your gender using `/register male` or `/register female`.")
         return
     if not recipient_gender:
-        await ctx.respond(f"{user.mention} has not registered their gender yet.")
-        return
+        await ctx.respond(f"{user.mention} has not registered their gender yet. Make them do it!!\n Selecting random one for now")
+        recipient_gender = random.choice(['male','female'])
     
     gif_category = f"{sender_gender}_{recipient_gender}"
 
