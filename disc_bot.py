@@ -78,7 +78,10 @@ async def action(ctx, action: str, user: discord.Member):
         return
     if not recipient_gender:
         await ctx.respond(f"{user.mention} has not registered their gender yet. Make them do it!!\n Selecting random one for now")
-        recipient_gender = random.choice(['male','female'])
+        possible_genders = [gender_pair.split('_')[1]
+                            for gender_pair in gif_data[action].keys() 
+                            if gender_pair.startswith(sender_gender)]
+        recipient_gender = random.choice(possible_genders)
     
     gif_category = f"{sender_gender}_{recipient_gender}"
 
