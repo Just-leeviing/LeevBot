@@ -7,6 +7,7 @@ import os
 import random
 from dotenv import load_dotenv
 from discord.ext import commands
+from discord import option
 from itertools import cycle
 import json
 
@@ -28,7 +29,8 @@ async def on_ready():
 
 def load_gifs():
     # with open("gifs.json","r") as file:
-    with open("some_out.json","r") as file:
+    # with open("some_out.json","r") as file:
+    with open(os.getenv('GIF_FILE'),"r") as file:
         return json.load(file)
     
 gif_data = load_gifs()
@@ -60,6 +62,7 @@ async def register(ctx, gender):
 
 
 @bot.command(description="Send a hug, kiss, pat, or highfive.")
+@option('action', description='Choose what to do', choices = gif_data.keys())
 async def action(ctx, action: str, user: discord.Member):
     """Sends a GIF based on the action and gender combination."""
     action = action.lower()
